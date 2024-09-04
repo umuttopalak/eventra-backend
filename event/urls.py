@@ -4,7 +4,7 @@ from .api import (EventAPI, EventDetailAPI, JoinEventAPI, LeaveEventAPI,
                   PublicEventAPI)
 
 urlpatterns = [
-    path('/', PublicEventAPI.as_view(), name='public-event-list'),
+    path('', PublicEventAPI.as_view(), name='public-event-list'),
 
     path('user/', EventAPI.as_view(), name='event-list-create'),
     path('user/<int:pk>/', EventDetailAPI.as_view(), name='event-detail'),
